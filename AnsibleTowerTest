@@ -1,0 +1,9 @@
+- name: credential retrieval basic
+  cyberark_credential:
+    api_base_url: "https://ccpdemo.cyberark.skytapdns.com"
+    app_id: "AnsibleTower01"
+    query: "Safe=Linux Root;Object=root-rhel-servers"
+  register: {{ result }}
+  
+  result:
+     { api_base_url }"/AIMWebService/api/Accounts?AppId="{ app_id }"&Query="{ query }
